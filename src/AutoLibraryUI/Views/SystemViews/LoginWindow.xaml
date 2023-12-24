@@ -1,0 +1,123 @@
+﻿<Window x:Class="AutoLibraryUI.Views.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:AutoLibraryUI.Views"
+        xmlns:fa="http://schemas.awesome.incremented/wpf/xaml/fontawesome.sharp"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="Вход" Height="372" Width="587"
+        ResizeMode="NoResize"
+
+        Loaded="Window_Loaded" Closed="Window_Closed"
+        >
+
+    <Border 
+            BorderThickness="1"
+            BorderBrush="DarkOliveGreen"
+            Background="LightGray">
+
+        <Grid>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="10"/>
+                    <RowDefinition Height="30"/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="380"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock
+                       FontSize="22"
+                       Grid.Column="1"
+                       Grid.Row="1"
+                       Text="Авторизация"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Center"/>
+
+                <TextBlock
+                    FontSize="12"
+                    Grid.Column="1"
+                    Grid.Row="2"
+                    Text="Имя пользователя"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"/>
+
+                <TextBox
+                    Grid.Column="1"
+                    FontSize="16"
+                    VerticalContentAlignment="Center"
+                    x:Name="UsernameTxt"
+                    Grid.Row="3"
+                    Width="240"/>
+
+                <TextBlock
+                    FontSize="12"
+                    Grid.Column="1"
+                    Grid.Row="4"
+                    Text="Пароль"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"/>
+
+                <PasswordBox
+                    FontSize="16"
+                    VerticalContentAlignment="Center"
+                    Grid.Column="1"
+                    x:Name="PasswordTxt"
+                    Grid.Row="5"
+                    Width="240">
+
+
+                </PasswordBox>
+
+                <Grid Grid.Column="1" Grid.Row="7">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <Button
+                        x:Name="LoginButton"
+                        Grid.Column="0"
+                        Click="LoginButton_OnClick"
+                        Grid.Row="7"
+                        Margin="45, 3, 3, 3"
+                        Content="Войти в систему"/>
+
+                    <Button
+                        x:Name="LoginAsReaderButton"
+                        Margin="3,3,45,3"
+                        Grid.Column="1"
+                        Click="LoginAsReaderButton_OnClick"
+                        Grid.Row="7"
+                    
+                        Content="Войти как читатель"/>
+
+                </Grid>
+
+
+
+            </Grid>
+        </Grid>
+
+
+
+    </Border>
+
+
+</Window>

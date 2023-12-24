@@ -1,0 +1,54 @@
+﻿<Window x:Class="AutoLibraryUI.Views.CreateBookWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AutoLibraryUI.Views"
+        xmlns:tk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        mc:Ignorable="d"
+        Title="Создание книги" Height="381" Width="467">
+    <Grid Margin="20">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="140"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Label VerticalContentAlignment="Center" Grid.Row="0" Content="Код:"/>
+        <Label VerticalContentAlignment="Center" Grid.Row="1" Content="Наименование: "/>
+        <Label VerticalContentAlignment="Center" Grid.Row="2" Content="ISBN: "/>
+        <Label VerticalContentAlignment="Center" Grid.Row="3" Content="Авторы:"/>
+        <Label VerticalContentAlignment="Center" Grid.Row="4" Content="Год издания:"/>
+        <Label VerticalContentAlignment="Center" Grid.Row="5" Content="Место издания:"/>
+        <Label VerticalContentAlignment="Center" Grid.Row="6" Content="Количество:"/>
+
+        <Label Margin="0,3,0,3" Grid.Row="0" Grid.Column="1" Content="-" x:Name="Id"/>
+        <TextBox Margin="0,3,0,3" Grid.Row="1" Grid.Column="1" x:Name="Isbn"/>
+        <TextBox Margin="0,3,0,3" Grid.Row="2" Grid.Column="1" x:Name="BookName"/>
+        <TextBox Margin="0,3,0,3" Grid.Row="3" Grid.Column="1" x:Name="Authors"/>
+        <tk:IntegerUpDown Margin="0,3,0,3" Grid.Row="4" Grid.Column="1" Minimum="1" Maximum="99999" x:Name="PublicationYear"/>
+        <TextBox Margin="0,3,0,3" Grid.Row="5" Grid.Column="1" x:Name="PublishLocation"/>
+        <tk:IntegerUpDown Margin="0,3,0,3" Grid.Row="6" Grid.Column="1" Minimum="0" Maximum="99999" x:Name="BookCount"/>
+
+        <Grid Grid.Column="0" Grid.Row="7" Grid.ColumnSpan="2" Margin="0,5,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Button Padding="10,0,10,0" Grid.Column="1" Content="Сохранить" Margin="3"  x:Name="SaveBtn"/>
+            <Button Padding="10,0,10,0" Grid.Column="2" Content="Отменить"  Margin="3" x:Name="CancelBtn"/>
+        </Grid>
+    </Grid>
+</Window>

@@ -1,0 +1,39 @@
+﻿<Window x:Class="AutoLibraryUI.Views.SystemViews.RegisterWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AutoLibraryUI.Views.SystemViews"
+        mc:Ignorable="d"
+        FontSize="16"
+        Title="Регистрация" Height="281" Width="374">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Label Margin="3" Grid.Column="0" Grid.Row="0" Content="Логин"/>
+        <Label Margin="3" Grid.Column="0" Grid.Row="1" Content="Пароль"/>
+        <Label Margin="3" Grid.Column="0" Grid.Row="2" Content="ФИО"/>
+        <Label Margin="3" Grid.Column="0" Grid.Row="3" Content="Роль"/>
+
+        <TextBox x:Name="Login" Margin="3" Grid.Column="1" Grid.Row="0"/>
+        <TextBox x:Name="Password" Margin="3" Grid.Column="1" Grid.Row="1"/>
+        <TextBox x:Name="FullName" Margin="3" Grid.Column="1" Grid.Row="2"/>
+
+        <ComboBox x:Name="RoleSelect" Margin="3" SelectedIndex="0" Grid.Row="3" Grid.Column="1"/>
+
+
+        <Button x:Name="SaveBtn" Click="SaveBtn_Click" Padding="5" Content="Сохранить" Grid.Column="0" Grid.Row="5" Grid.ColumnSpan="2" Margin="30, 9, 30, 3"/>
+
+    </Grid>
+</Window>
